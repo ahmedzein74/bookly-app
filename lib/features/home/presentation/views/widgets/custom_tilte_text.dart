@@ -13,7 +13,7 @@ class CustomTitleText extends StatelessWidget {
           Text(
             textAlign: TextAlign.right,
             'Best Seller',
-            style: Styles.titleMedium,
+            style: Styles.textStyle18,
           ),
         ],
       ),
