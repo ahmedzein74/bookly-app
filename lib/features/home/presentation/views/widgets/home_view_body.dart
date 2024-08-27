@@ -1,5 +1,5 @@
 import 'package:bookly_app/features/home/presentation/views/widgets/best_seller_list_view.dart';
-import 'package:bookly_app/features/home/presentation/views/widgets/custom_app_bar.dart';
+import 'package:bookly_app/features/home/presentation/views/widgets/custom_home_view_app_bar.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_tilte_text.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/featured_book_list_view.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +13,7 @@ class HomeViewBody extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 20.0),
       child: CustomScrollView(
         slivers: [
-          SliverToBoxAdapter(child: CustomAppBar()),
+          SliverToBoxAdapter(child: CustomHomeViewAppBar()),
           SliverToBoxAdapter(child: FeaturedBookListView()),
           SliverToBoxAdapter(child: CustomTitleText()),
           SliverToBoxAdapter(child: SizedBox(height: 20)),
