@@ -13,7 +13,7 @@ class SearchResiltListView extends StatelessWidget {
       // scrollDirection: Axis.vertical,
       itemCount: 10,
       itemBuilder: (context, index) {
-        return const BookListViewItem();
+        // return const BookListViewItem();
       },
       separatorBuilder: (context, index) {
         return const SizedBox(

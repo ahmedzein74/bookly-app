@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class ErrorWidget extends StatelessWidget {
-  final String errorMessage;
+class CustomErrorWidget extends StatelessWidget {
+  final String errMessage;
 
-  const ErrorWidget({super.key, required this.errorMessage});
+  const CustomErrorWidget({super.key, required this.errMessage});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class ErrorWidget extends StatelessWidget {
       padding: const EdgeInsets.all(16.0),
       color: Colors.red,
       child: Text(
-        errorMessage,
+        errMessage,
         style: const TextStyle(color: Colors.white),
       ),
     );

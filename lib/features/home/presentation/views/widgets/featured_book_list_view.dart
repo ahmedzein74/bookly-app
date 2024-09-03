@@ -1,4 +1,5 @@
 import 'package:bookly_app/core/widgets/custom_loading_indicator.dart';
+import 'package:bookly_app/core/widgets/error_widget.dart';
 import 'package:bookly_app/features/home/presentation/manger/featured_books/feature_books_cubit.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,9 @@ class FeaturedBookListView extends StatelessWidget {
               itemCount: state.books.length,
               itemBuilder: (context, index) {
                 return CustomBookImage(
-                  imageUrl: state.books[index].volumeInfo.imageLinks.thumbnail,
+                  imageUrl:
+                      state.books[index].volumeInfo?.imageLinks?.thumbnail ??
+                          '',
                 );
               },
               separatorBuilder: (context, index) {
@@ -31,7 +34,9 @@ class FeaturedBookListView extends StatelessWidget {
             ),
           );
         } else if (state is FeatureBooksFailure) {
-          return ErrorWidget(state.errMessage);
+          return CustomErrorWidget(
+            errMessage: state.errMessage,
+          );
         } else {
           return const CustomLoadingIndicator();
         }
